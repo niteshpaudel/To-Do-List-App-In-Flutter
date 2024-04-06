@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list_app/screens/home_screen.dart';
 import 'package:to_do_list_app/screens/sign_up.dart';
 
 void main() {
