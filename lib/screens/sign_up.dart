@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:to_do_list_app/screens/home_screen.dart';
 import 'package:to_do_list_app/widgets/text_field_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -17,6 +16,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
       body: Container(
         padding: const EdgeInsets.fromLTRB(15, 25, 15, 0),
         height: MediaQuery.of(context).size.height,
@@ -123,7 +123,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   fixedSize: MaterialStateProperty.all<Size>(
                     Size(MediaQuery.of(context).size.width, 60),
                   )),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+              },
               child: const Text(
                 'Continue',
                 style: TextStyle(
@@ -190,12 +193,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 Text(
                   'Already have an account?  ',
-                  style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
+                  style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
                 ),
                 const Text(
                   'Sign in instead',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     color: Color.fromARGB(255, 255, 119, 88),
                     decoration: TextDecoration.underline,
                     decorationColor: Color.fromARGB(255, 255, 119, 88),
