@@ -10,57 +10,58 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          padding: const EdgeInsets.only(top: 70, left: 20),
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          padding: const EdgeInsets.fromLTRB(15, 25, 15, 0),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(colors: [
-            Colors.redAccent,
-            Colors.pink,
-          ], begin: Alignment.bottomCenter, end: Alignment.centerLeft)),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                child: const Text(
-                  'Hii',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
+              Row(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      color: Colors.orangeAccent,
+                      image: const DecorationImage(
+                          image: AssetImage(
+                            'assets/icons/user-icon.png',
+                          ),
+                          scale: 3,
+                          alignment: Alignment(0, 7)),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: const Text(
-                  'Nitesh',
-                  style: TextStyle(
-                    fontSize: 54,
-                    color: Colors.black,
+                  const SizedBox(
+                    width: 10,
                   ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: const Text(
-                  'Let the work begin',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.black54,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Hi, Nitesh 👋',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: -0.5),
+                      ),
+                      Text(
+                        'Simplify your day, one task at a time',
+                        style: TextStyle(
+                          color: Colors.grey.shade600,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
+                ],
               )
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
