@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 65,
                     height: 65,
                     decoration: BoxDecoration(
-                      color: Colors.orangeAccent,
+                      color: Colors.greenAccent,
                       image: const DecorationImage(
                           image: AssetImage(
                             'assets/icons/user-icon.png',
