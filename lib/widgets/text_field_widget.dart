@@ -14,7 +14,10 @@ class TextFieldWidget extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: const [
           BoxShadow(
-              color: Colors.black, offset: Offset(0, 15), spreadRadius: -9),
+            color: Colors.black,
+            offset: Offset(0, 15),
+            spreadRadius: -9,
+          ),
         ],
         borderRadius: BorderRadius.circular(20),
       ),
