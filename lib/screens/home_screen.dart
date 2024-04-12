@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             letterSpacing: -0.5),
                       ),
                       Text(
-                        'Simplify your day, one task at a time',
+                        'Stay Organized With Tasks',
                         style: TextStyle(
                           color: Colors.grey.shade600,
                           fontSize: 14,
