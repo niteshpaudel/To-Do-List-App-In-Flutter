@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:to_do_list_app/screens/home_screen.dart';
 import 'package:to_do_list_app/theme/colors.dart';
 import 'package:to_do_list_app/widgets/text_field_widget.dart';
@@ -39,7 +42,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  SystemNavigator.pop();
+                },
                 style: IconButton.styleFrom(
                     backgroundColor: const Color.fromARGB(102, 228, 227, 227),
                     shape: RoundedRectangleBorder(
